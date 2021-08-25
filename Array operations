@@ -1,0 +1,49 @@
+my_array=[1,2,3,4,5]                      #add the required elements in the array
+def rerun():                              #function to run the program again
+   print("Enter \"H\" to start again")
+   a=input("Do you want to continue")
+   if a=="H":
+      switch()
+def switch():                             #switch function to move between different operations
+   print("~~MENU~~")
+   print(" 1:traversal\n 2:insertion\n 3:deletion\n 4:updation \n 5:searching")
+   o=input("Enter the required operation")
+   if o=="1":
+      traversal()
+   elif o=="2":
+      insertion()
+   elif o == "3":
+      deletion()
+   elif o == "4":
+      updation()
+   elif o == "5":
+      searching()
+   rerun()
+
+def traversal():
+ print("array traversal")
+ for x in my_array:
+   print(x)
+
+def deletion():
+ my_array.remove(4)     #insert the required number you want to remove in the paranthesis
+ for x in my_array:
+   print(x)
+ return x
+
+def insertion():
+   my_array.insert(3, 20)    #insert the required position and then the element
+   for x in my_array:
+    print(x)
+
+def updation():
+   my_array[3]=99              #assign the required value
+   for x in my_array:
+      print(x)
+
+def searching():
+   p=int(input("enter the index"))         #choose the index to search
+   print(my_array[p])
+
+switch()
+
