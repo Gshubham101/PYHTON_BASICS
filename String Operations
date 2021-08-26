@@ -1,0 +1,34 @@
+my_string="I like red velvet cake!"             #enter your string here
+def rerun():                              #function to run the program again
+   print("Enter \"R\" to start again")
+   a=input("Do you want to continue")
+   if a=="R":
+      switch()
+def switch():                             #switch function to move between different operations
+   print("~~MENU~~")
+   print(" 1:UpperCase\n 2:LowerCase\n 3:To find a word \n 4.split \n 5.partition" )
+   o=input("Enter the required operation")
+   if o=="1":
+      to_capital()
+   elif o=="2":
+      to_lower()
+   elif o == "3":
+      find_word()
+   elif o == "4":
+       split()
+   elif o == "5":
+       partion()
+   rerun()
+def to_capital():
+    x=my_string.upper()                            #converts the string to uppercase
+    print(x)
+def to_lower():
+    print(my_string.casefold())                    #converts the string to lowercase
+def find_word():
+    print(my_string.find("I"))
+def split():
+    print(my_string.rsplit( ))                     #splits the string at the element entered in the pararnthesis of rsplit method
+def partion():
+    print(my_string.rpartition("like"))            #partitions the string at the word entered in the parenthesis of rpartition method and other strings in group of 3
+switch()
+
